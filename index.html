@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Облік витрат на кота</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="cat_photo.png" alt="Фото мого кота" class="cat-photo" />
+    <h1>В скільки нам обходиться Грейс</h1>
+  </header>
+
+  <main>
+    <section class="add-expense">
+      <h2>Додати витрату</h2>
+      <form id="expense-form">
+        <input type="date" id="date" required />
+        <input type="text" id="category" placeholder="Категорія (їжа, вет...)" required />
+        <input type="number" id="amount" placeholder="Сума, грн" step="0.01" min="0" required />
+        <input type="text" id="description" placeholder="Опис (необов’язково)" />
+        <button type="submit">Додати</button>
+      </form>
+    </section>
+
+    <section class="expense-list">
+      <h2>Список витрат</h2>
+      <h3>Всього витрачено: <span id="total-amount">0.00</span> грн</h3>
+      <ul id="expenses"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

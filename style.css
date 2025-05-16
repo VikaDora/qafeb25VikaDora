@@ -1,0 +1,165 @@
+/* Основний фон і текст */
+body {
+  background-color: #f0f0f0; /* світло-сірий фон */
+  color: #333; /* темно-сірий текст */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0 20px 40px;
+}
+
+/* Заголовок і фото */
+header {
+  text-align: center;
+  padding: 30px 0 20px;
+  background-color: #444; /* темно-сірий фон хедера */
+  color: #ddd; /* світло-сірий текст */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.cat-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #aaa; /* світло-сіра рамка */
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+/* Розмітка main */
+main {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #e0e0e0; /* трохи темніший світло-сірий фон */
+  padding: 20px 30px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Секції */
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Форма */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+form input {
+  flex: 1 1 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #888;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fafafa;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #555;
+  outline: none;
+}
+
+form button {
+  flex: 1 1 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: #555;
+  color: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #333;
+}
+
+/* Список витрат */
+.expense-list ul {
+  list-style: none;
+  padding-left: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  border-top: 2px solid #999;
+}
+
+.expense-list li {
+  background-color: #ccc;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expense-list li strong {
+  font-size: 1.1rem;
+  margin-right: 8px;
+}
+
+.expense-list li em {
+  font-size: 0.9rem;
+  color: #444;
+  margin-left: 8px;
+  flex-grow: 1;
+}
+
+/* Кнопка видалення */
+.delete-btn {
+  background-color: #888;
+  color: #eee;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #555;
+}
+
+/* Загальна сума */
+.expense-list h3 {
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+/* Адаптивність */
+@media (min-width: 480px) {
+  form input[type="date"], form input[type="text"], form input[type="number"] {
+    flex: 1 1 45%;
+  }
+
+  form input#description {
+    flex: 1 1 100%;
+  }
+
+  form button {
+    flex: 1 1 100%;
+  }
+}
